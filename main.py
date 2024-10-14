@@ -12,8 +12,14 @@ if __name__ == '__main__':
     
     today_utc_time= time.strftime('%Y-%m-%d %H:%M:%S',time.localtime())
     today_ctc_time = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()+28800))
-    today_time=f'UTC: {today_utc_time} <br> CTC: {today_ctc_time} <br> timestamp: {time.time()}  <br> time_good {datetime.datetime.now()}'
+    current_goode_time=datetime.datetime.now()
+    current_hour=current_goode_time.hour
+    current_hour_sh=current_hour+8
+    if current_hour_sh<10 or current_hour_sh>22:
+        print('不在发送时间  太早或者太晚  都会打扰我  所以不发送')
+        sys.exit(0)
 
+    today_time=f'UTC: {today_utc_time} <br> CTC: {today_ctc_time} <br> timestamp: {time.time()}  <br> time_good {current_goode_time}'
     issues = get_open_issues()
     for index ,issue in enumerate(issues):
         title,url=issue[0],issue[1]
