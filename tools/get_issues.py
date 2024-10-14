@@ -31,17 +31,20 @@ def get_open_issues(owner="wjsw1781", repo="xxx", token=None):
     all_open_issues_with_comments = []
     for issue in issues:
         comments_url = issue['comments_url']
+        # comments_url = 'https://github.com/tensorflow/tensorflow/issues/22'
         comments_response = requests.get(comments_url, headers=headers)
         comments = comments_response.json()
-        try:
-            lastest_comment = comments[-1]['created_at']                      #获取最后一条评论的时间 '2024-10-14T07:52:19Z'
-        except Exception as e:
-            continue
-        today_time=datetime.datetime.now() #获取当前时间
-        lastest_comment_time=datetime.datetime.strptime(lastest_comment,'%Y-%m-%dT%H:%M:%SZ')
-        if lastest_comment_time.date() != today_time.date():
-            all_open_issues_with_comments.append(issue)
 
+        today_have_comment = False
+        for comment in comments:
+            lastest_comment = comment['created_at']                      #获取最后一条评论的时间 '2024-10-14T07:52:19Z'
+            lastest_comment_time=datetime.datetime.strptime(lastest_comment,'%Y-%m-%dT%H:%M:%SZ')
+            today_time=datetime.datetime.now() #获取当前时间
+            if lastest_comment_time.date() == today_time.date():
+                today_have_comment = True
+                break
+        if not today_have_comment:
+            all_open_issues_with_comments.append(issue)
     
     print("以下是开放的 Issue:")
     all_issues_md=[]
