@@ -2,7 +2,8 @@ import requests
 import markdown
 import datetime
 # 这里优化的点逻辑 看看今天open的issue是否被comment过，如果被comment过，则不展示
-def get_open_issues(owner="wjsw1781", repo="xxx", token='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'):
+# def get_open_issues(owner="wjsw1781", repo="xxx", token='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'):
+def get_open_issues(owner="wjsw1781", repo="xxx", token='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'):
 
 
     # 设置请求头
