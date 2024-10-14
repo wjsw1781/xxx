@@ -2,10 +2,8 @@ import requests
 import markdown
 import datetime
 # 这里优化的点逻辑 看看今天open的issue是否被comment过，如果被comment过，则不展示
-def get_open_issues(owner="wjsw1781", repo="xxx", token=None):
+def get_open_issues(owner="wjsw1781", repo="xxx", token='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'):
 
-    # 如果需要身份验证，可以用token替换None
-    token = None  # 或者 'YOUR_PERSONAL_ACCESS_TOKEN'
 
     # 设置请求头
     headers = {
@@ -48,7 +46,7 @@ def get_open_issues(owner="wjsw1781", repo="xxx", token=None):
     
     print("以下是开放的 Issue:")
     all_issues_md=[]
-    for issue in issues:
+    for issue in all_open_issues_with_comments:
         print(f"- [{issue['title']}]({issue['html_url']})")
         md_content=f'- [{issue["title"]}]({issue["html_url"]})\n\n'
         html_content = markdown.markdown(md_content)
