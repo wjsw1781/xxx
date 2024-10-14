@@ -21,7 +21,7 @@ steps:
     run: python qqmail_tell.py 1788367473@qq.com '算法学习方面' '今日刷了什么?学到什么?'
 
 
-name: GitHub Actions Build and Deploy Demo
+name: GitHub Actions tell_suanfa_study_bot
 on:
   push
 jobs:
