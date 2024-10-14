@@ -16,7 +16,7 @@ if __name__ == '__main__':
     current_hour=current_goode_time.hour
     current_hour_sh=current_hour+8
     if current_hour_sh<10 or current_hour_sh>22:
-        print('不在发送时间  太早或者太晚  都会打扰我  所以不发送')
+        print(f'current_hour_sh {current_hour_sh} current_hour {current_hour} 不在发送时间  太早或者太晚  都会打扰我  所以不发送')
         sys.exit(0)
 
     today_time=f'UTC: {today_utc_time} <br> CTC: {today_ctc_time} <br> timestamp: {time.time()}  <br> time_good {current_goode_time}'
