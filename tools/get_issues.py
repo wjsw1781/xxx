@@ -30,7 +30,8 @@ def get_open_issues(owner="wjsw1781", repo="xxx", token=None):
             for issue in issues:
                 # 打印标题和链接
                 print(f"- [{issue['title']}]({issue['html_url']})")
-                all_issues_md.append([issue['title'],issue['html_url']])
+                md_content=f'- [{issue["title"]}]({issue["html_url"]})\n\n'
+                all_issues_md.append([issue['title'],md_content])
             return all_issues_md
     else:
         print(f"请求失败: {response.status_code}, {response.text}")

@@ -14,9 +14,10 @@ def send_email(to_email, title,content):
     # 发件人邮箱
     sender = '2823558582@qq.com'
     # 邮件主题
-    subject = '新的通知 '+title
+    subject = title
     # 实例化MIMEText邮件对象
-    message = MIMEText(content, 'plain', 'utf-8')
+    # message = MIMEText(content, 'plain', 'utf-8')
+    message = MIMEText(content, 'html', 'utf-8')
     # 邮件主题
     message['Subject'] = Header(subject, 'utf-8')
     # 发件人
@@ -36,4 +37,6 @@ def send_email(to_email, title,content):
         return 1
     except Exception as e:
         return 0
-    
+
+if __name__ == '__main__':
+    send_email('1781591279@qq.com','test','<a href="https://drissionpage.cn/ChromiumPage/get_ele_info/"> a</a>')
