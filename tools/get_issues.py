@@ -1,4 +1,5 @@
 import requests
+import markdown
 
 
 def get_open_issues(owner="wjsw1781", repo="xxx", token=None):
@@ -31,7 +32,9 @@ def get_open_issues(owner="wjsw1781", repo="xxx", token=None):
                 # 打印标题和链接
                 print(f"- [{issue['title']}]({issue['html_url']})")
                 md_content=f'- [{issue["title"]}]({issue["html_url"]})\n\n'
-                all_issues_md.append([issue['title'],md_content])
+                html_content = markdown.markdown(md_content)
+
+                all_issues_md.append([issue['title'],html_content])
             return all_issues_md
     else:
         print(f"请求失败: {response.status_code}, {response.text}")
