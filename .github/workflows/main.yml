@@ -1,17 +1,14 @@
 
-name: 'suanfa_study Bot'
- 
+
+name: GitHub Actions tell_suanfa_study_bot
 on:
-  push:
-  schedule:
-    - cron: '0 18 * * *'
+  push
 jobs:
-  job:tell_suanfa
-  runs-on: ubuntu-18.04
-  
-  steps:
-    - name: 同步仓库
-      uses: actions/checkout@v2
+  tell_suanfa_study_bot:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
     - name: 安装Python
       uses: actions/setup-python@v2
       with:
@@ -22,4 +19,3 @@ jobs:
         pip install -r requirements.txt
     - name: 运行脚本
       run: python qqmail_tell.py 1788367473@qq.com '算法学习方面' '今日刷了什么?学到什么?'
-
