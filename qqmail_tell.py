@@ -2,8 +2,6 @@ import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
 
-from loguru import logger
-
 def send_email(to_email, title,content):
     # QQ邮箱服务器地址
     mail_host = 'smtp.qq.com'
@@ -35,7 +33,6 @@ def send_email(to_email, title,content):
         server.quit()
         return 1
     except Exception as e:
-        logger.error(f'{e}')
         return 0
     
 
