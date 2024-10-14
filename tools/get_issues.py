@@ -7,7 +7,7 @@ def get_open_issues(owner="wjsw1781", repo="xxx", token='ghp_8kTGbpNWeFIx1OYP1FD
 
     # 设置请求头
     headers = {
-        "Authorization": f"token {token}" if token else None,
+        "Authorization": token,
         "Accept": "application/vnd.github.v3+json",
     }
 
@@ -19,11 +19,11 @@ def get_open_issues(owner="wjsw1781", repo="xxx", token='ghp_8kTGbpNWeFIx1OYP1FD
 
     # 检查请求是否成功
     if response.status_code != 200:
-        print("当前没有任何开放的 Issue。")
+        print("发生异常 不为200 ")
         return []
     issues = response.json()
     if not issues:
-        print("当前没有任何开放的 Issue。")
+        print("拿到空的 open_Issue。")
         return []
     # 过滤掉今日已经被评论的issue 没有接口 这能全部获取 然后过滤掉
     all_open_issues_with_comments = []
