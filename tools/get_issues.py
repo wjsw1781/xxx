@@ -44,7 +44,6 @@ def get_open_issues(owner="wjsw1781", repo="xxx", token='ghp_8kTGbpNWeFIx1OYP1FD
         if not today_have_comment:
             all_open_issues_with_comments.append(issue)
     
-    print("以下是开放的 Issue:")
     all_issues_md=[]
     for issue in all_open_issues_with_comments:
         print(f"- [{issue['title']}]({issue['html_url']})")
@@ -52,6 +51,8 @@ def get_open_issues(owner="wjsw1781", repo="xxx", token='ghp_8kTGbpNWeFIx1OYP1FD
         html_content = markdown.markdown(md_content)
 
         all_issues_md.append([issue['title'],html_content])
+    if not all_issues_md:
+        print(f"{len(issues)}   --->   没有需要展示的issue  全部都已经评论了 ")
     return all_issues_md
 
 
