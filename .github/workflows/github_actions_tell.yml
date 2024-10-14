@@ -11,7 +11,7 @@ on:
     types: [opened, edited, closed]                 # 当创建、编辑或关闭 Issue 时触发
   # issue_comment:
   #   types: [created]                              # 当回复 Issue 时触发
-  
+
 jobs:
   tell_suanfa_study_bot:
     runs-on: ubuntu-latest
@@ -27,4 +27,4 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: 运行脚本
-      run: python qqmail_tell.py 1781591279@qq.com '算法学习方面' '今日刷了什么?学到什么?'
+      run: python main.py 1781591279@qq.com '算法学习方面' '今日刷了什么?学到什么?'
