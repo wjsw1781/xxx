@@ -2,6 +2,12 @@ import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
 
+def get_all_open_issues():
+    # TODO: Implement the function to get all open issues from GitHub
+    
+    return []
+
+
 def send_email(to_email, title,content):
     # QQ邮箱服务器地址
     mail_host = 'smtp.qq.com'
@@ -48,7 +54,11 @@ if __name__ == '__main__':
     to_email = sys.argv[1]
     title = sys.argv[2]
     content = sys.argv[3]
-    send_email(to_email, title, content)
+    if '算法学习方面' in title:
+        # 
+
+    else:
+        send_email(to_email, title, content)
 
 
     
