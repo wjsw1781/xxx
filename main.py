@@ -21,7 +21,6 @@ if __name__ == '__main__':
     for index ,issue in enumerate(issues):
         title,url=issue[0],issue[1]
         send_email(to_email, f'今天 {len(issues)} / {index+1} _ '+title, url)
-        send_email('wangzhiqiang@01.ai', f'今天 {len(issues)} / {index+1} _ '+title, url)
         time.sleep(60)
 
 

@@ -39,4 +39,7 @@ def send_email(to_email, title,content):
         return 0
 
 if __name__ == '__main__':
-    send_email('1781591279@qq.com','test','<a href="https://drissionpage.cn/ChromiumPage/get_ele_info/"> a</a>')
+    from get_issues import get_open_issues
+    all_issues=get_open_issues()
+    for iii in all_issues:
+        send_email('1781591279@qq.com',iii[0],iii[1])
