@@ -2,10 +2,6 @@ import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
 
-def get_all_open_issues():
-    # TODO: Implement the function to get all open issues from GitHub
-    
-    return []
 
 
 def send_email(to_email, title,content):
@@ -56,7 +52,11 @@ if __name__ == '__main__':
     content = sys.argv[3]
     if '算法学习方面' in title:
         # 
-
+        from tools.get_issues import get_open_issues
+        issues = get_open_issues()
+        for index ,issue in enumerate(issues):
+            title,url=issue[0],issue[1]
+            send_email(to_email, f'今天 {len(issues)} / {index+1} _ '+title, url)
     else:
         send_email(to_email, title, content)
 
