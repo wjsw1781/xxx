@@ -17,4 +17,4 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: 运行脚本
-      run: python qqmail_tell.py 1788367473@qq.com '算法学习方面' '今日刷了什么?学到什么?'
+      run: python qqmail_tell.py 1781591279@qq.com '算法学习方面' '今日刷了什么?学到什么?'
