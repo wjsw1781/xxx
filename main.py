@@ -16,7 +16,8 @@ if __name__ == '__main__':
     content = sys.argv[3]
     if '算法学习方面' not in title:
         sys.exit(0)
-        # 
+
+
     issues = get_open_issues()
     for index ,issue in enumerate(issues):
         title,url=issue[0],issue[1]
