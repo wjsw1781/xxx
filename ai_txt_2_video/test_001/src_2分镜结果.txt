@@ -1,0 +1,89 @@
+Scene 1
+{
+"镜头类型": "中景",
+"镜头场景": "郭靖沉沉睡下，床边黄蓉坐在床沿",
+"镜头角色动作以及表情": "黄蓉坐在床沿，替丈夫理了理有点乱的头发，轻叹一声。",
+"镜头角色动作以及表情_英语版": "Huang Rong sits on the bed, tidying up her husband's messy hair, and sighs lightly.",
+"镜头角色台词或者旁白": ""
+}
+
+Scene 2
+{
+"镜头类型": "特写",
+"镜头场景": "黄蓉的脸",
+"镜头角色动作以及表情": "黄蓉露出思念和感伤的表情。",
+"镜头角色动作以及表情_英语版": "Huang Rong shows a nostalgic and painful expression.",
+"镜头角色台词或者旁白": "丈夫身子的状况是好了一些，那个道士还是有用心替其治疗的。"
+}
+
+Scene 3
+{
+"镜头类型": "回忆镜头",
+"镜头场景": "赵志敬替郭靖疗伤",
+"镜头角色动作以及表情": "赵志敬按着郭靖的背心要穴运功，黄蓉扶着墙站着。",
+"镜头角色动作以及表情_英语版": "Zhao Zhi Jing presses on Guo Jing's back acupoints, while Huang Rong stands against the wall.",
+"镜头角色台词或者旁白": ""
+}
+
+Scene 4
+{
+"镜头类型": "特写",
+"镜头场景": "黄蓉的脸",
+"镜头角色动作以及表情": "黄蓉露出羞愧和痛苦的表情。",
+"镜头角色动作以及表情_英语版": "Huang Rong shows a shameful and painful expression.",
+"镜头角色台词或者旁白": "只是...... 只是自己却不争气，竟是被那家伙在靖哥哥面前弄出那种羞人的样子......"
+}
+
+Scene 5
+{
+"镜头类型": "回忆镜头",
+"镜头场景": "赵志敬和黄蓉在院落",
+"镜头角色动作以及表情": "赵志敬脱光了衣服，黄蓉扶着他的大腿，俏脸刚好对着他的阴囊。",
+"镜头角色动作以及表情_英语版": "Zhao Zhi Jing takes off his clothes, Huang Rong sits on his legs, her beautiful face facing his crotch.",
+"镜头角色台词或者旁白": ""
+}
+
+Scene 6
+{
+"镜头类型": "中景",
+"镜头场景": "黄蓉坐在赵志敬的腿间",
+"镜头角色动作以及表情": "黄蓉不断的用香舌舔弄男人的会阴以及阴囊。",
+"镜头角色动作以及表情_英语版": "Huang Rong continuously licks the man's groin and scrotum with her tongue.",
+"镜头角色台词或者旁白": ""
+}
+
+Scene 7
+{
+"镜头类型": "中景",
+"镜头场景": "赵志敬和黄蓉在院落",
+"镜头角色动作以及表情": "赵志敬把黄蓉拉到房间外的院落，黄蓉扶着院子的小树，翘起屁股。",
+"镜头角色动作以及表情_英语版": "Zhao Zhi Jing pulls Huang Rong to the courtyard, Huang Rong leans against the small tree, raises her buttocks.",
+"镜头角色台词或者旁白": ""
+}
+
+Scene 8
+{
+"镜头类型": "特写",
+"镜头场景": "黄蓉的脸",
+"镜头角色动作以及表情": "黄蓉的脸上又红了，暗道：「那淫道也算是遵守承诺，总算没在靖哥哥眼前再弄自己......」",
+"镜头角色动作以及表情_英语版": "Huang Rong's face blushes again, thinking: 'That pervert has kept his promise, and hasn't humiliated me in front of Guo Jing again...'",
+"镜头角色台词或者旁白": ""
+}
+
+Scene 9
+{
+"镜头类型": "中景",
+"镜头场景": "郭靖沉沉睡下，黄蓉握紧郭靖的手",
+"镜头角色动作以及表情": "黄蓉握紧郭靖的手，喃喃的道：「靖哥哥...... 蓉儿应该怎么办？ 我...... 我的身子已经脏了......」",
+"镜头角色动作以及表情_英语版": "Huang Rong holds Guo Jing's hand tightly, murmuring: 'Guo Jing, what should I do? My body is already tainted...'",
+"镜头角色台词或者旁白": ""
+}
+
+Scene 10
+{
+"镜头类型": "中景",
+"镜头场景": "黄蓉站起身来，替郭靖盖好被子",
+"镜头角色动作以及表情": "黄蓉站起身来，替郭靖盖好被子，准备下山。",
+"镜头角色动作以及表情_英语版": "Huang Rong gets up, covers Guo Jing with the quilt, and prepares to leave.",
+"镜头角色台词或者旁白": ""
+}

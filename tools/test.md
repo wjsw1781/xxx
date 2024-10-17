@@ -1,26 +1,43 @@
-#wsl 每次启动后  ifconfig的ip都会变化  window每次都要做一次端口映射172.25.83.93
-netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=22 connectaddress=172.25.83.93 connectport=22
+import os
+from DrissionPage import ChromiumPage, ChromiumOptions
+import DrissionPage
+from loguru import logger
+import time
+import DrissionPage._base
+import DrissionPage._base.base 
+user_path_work=os.path.abspath('./001')
+url='https://creator.douyin.com/creator-micro/content/manage'
+os.makedirs(user_path_work, exist_ok=True)
+co = ChromiumOptions()
+co.set_local_port(9222)
+co.set_browser_path(r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe")
+co.set_user_data_path(user_path_work)
+page = ChromiumPage(addr_or_opts=co)
+# page.screencast.set_save_path('video')  # 设置视频存放路径
+# page.screencast.set_mode.video_mode()  # 设置录制
+# page.screencast.start()  # 开始录制
+
+page.get(url)
+page.wait(15)
+
+page.scroll.to_see(up_ele)
 
 
-#wsl 每次启动后  ifconfig的ip都会变化  window每次都要做一次端口映射172.25.83.93
-#!/usr/bin/bash
-# 为 win 设置 wsl host
-# win hosts 文件路径
-win_hosts_path="/mnt/c/Windows/System32/drivers/etc/hosts"
-# 为 wsl2 设置的域名
-wsl_domain="wzq.com"
-# 获取 wsl2 的 ip
-wsl_ip=$(ifconfig eth0 | grep -w inet | awk '{print $2}')
-# 判断是否已存在 wsl2 的域名，如果存在则修改，否则追加
-if grep -wq "$wsl_domain" $win_hosts_path
-then
-    # 此处因为权限问题没有直接用 sed 修改 hosts 文件
-        win_hosts=$(sed -s "s/.* $wsl_domain/$wsl_ip $wsl_domain/g" $win_hosts_path)
-        echo "$win_hosts" > $win_hosts_path
-    else
-        echo "$wsl_ip $wsl_domain" >> $win_hosts_path
-fisudo service ssh --full-restart
+delete_span=up_ele.ele('xpath://span[contains(text(), "删除作品")]')
+import execjs
+print(execjs.eval("'red yellow blue'.split(' ')"))
+ctx = execjs.compile("""
+    function add(x, y) {
+        return x + y;
+    }
+""")
+print(ctx.call("add", 1, 2))
 
-Host wzq.com
-  HostName wzq.com
-  User wzq
+npm config set registry https://registry.npmmirror.com	
+npm cache clean --force
+
+#文本中包含
+delete_span=up_ele.ele('xpath://span[contains(text(), "删除作品")]')
+
+#属性中包含
+player_span=up_ele.ele('xpath://span[contains(@class, "info-figure-text")]')

@@ -15,6 +15,7 @@ if __name__ == '__main__':
     current_goode_time=datetime.datetime.now()
     current_hour=current_goode_time.hour
     current_hour_sh=current_hour+8
+    pre_hour=current_hour-8
     if current_hour_sh<10 or current_hour_sh>22:
         print(f'current_hour_sh {current_hour_sh} current_hour {current_hour} 不在发送时间  太早或者太晚  都会打扰我  所以不发送')
         sys.exit(0)
