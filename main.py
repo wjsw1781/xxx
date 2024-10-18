@@ -19,13 +19,16 @@ if __name__ == '__main__':
     if current_hour_sh<10 or current_hour_sh>22:
         print(f'current_hour_sh {current_hour_sh} current_hour {current_hour} 不在发送时间  太早或者太晚  都会打扰我  所以不发送')
         sys.exit(0)
-
+    now_time=time.time()
+    have_send_time_pre=open('have_send_time.txt','w+').read()
     today_time=f'UTC: {today_utc_time} <br> CTC: {today_ctc_time} <br> timestamp: {time.time()}  <br> time_good {current_goode_time}'
+
     issues = get_open_issues()
     for index ,issue in enumerate(issues):
         title,url=issue[0],issue[1]
         send_email(to_email, f'今天 {len(issues)} / {index+1} _ '+title, url+'\n\n'+today_time)
         time.sleep(60)
+    
 
 
     
