@@ -19,16 +19,6 @@ if __name__ == '__main__':
     if current_hour_sh<10 or current_hour_sh>22:
         print(f'current_hour_sh {current_hour_sh} current_hour {current_hour} 不在发送时间  太早或者太晚  都会打扰我  所以不发送')
         sys.exit(0)
-    now_time=time.time()
-    have_send_time_pre=open('have_send_time.txt','w+').read()
-    if not have_send_time_pre:
-        open('have_send_time.txt','w+').write(str(now_time))
-        have_send_time_pre=now_time
-    else:
-        have_send_time_pre=float(have_send_time_pre)
-    if now_time-have_send_time_pre<3600*5:
-        print(f'距离上次发送时间太短了  {now_time-have_send_time_pre}  小于3600秒  不发送')
-        sys.exit(0)
 
     today_time=f'UTC: {today_utc_time} <br> CTC: {today_ctc_time} <br> timestamp: {time.time()}  <br> time_good {current_goode_time}'
     issues = get_open_issues()
