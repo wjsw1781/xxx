@@ -1,3 +1,7 @@
 tools/__pycache__/get_issues.cpython-310.pyc
 *.pyc
 have_send_time.txt
+p1_vmp/node_modules/.bin/node-which.cmd
+**/node_modules/**
+
+
