@@ -33,12 +33,13 @@
         }
     }
 }
-// 示例
+
+console.log(2*5+8)
 // 指令含义映射
 // PUSH               1
 // multiply           2
 // add                3
 // console.log        4
-console.log(2*5+8)
 let human_complier_inslist=[1,2,1,5,2,1,8,3,4]
 vmFunc(human_complier_inslist)
+
