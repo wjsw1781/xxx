@@ -1,3 +1,4 @@
+/* eslint-disable no-case-declarations */
 
 const fs=require('fs');
 
@@ -93,7 +94,7 @@ function vmFunc(instlist,poolList) {
             case INST.PUSH:
                 let indexof_pool = instlist[pc++];
                 stack.push(poolList[indexof_pool]);
-                break;
+                break; 
             case INST.ADD:
                 let right = stack.pop();
                 let left = stack.pop();
